@@ -21,13 +21,15 @@ pvalues = []
 # Generate N perlin noise values from base with time step
 N = 1000
 # Set the required output range for interpolation [MIN, MAX]
-outRange = [0,100]
+outputRange = [0,100]
+perlinRange = [-1, 1]
 
 for x in range(N):
 	# Use 1d pnoise1 to generate noise value
 	pval = pnoise1(base)
-	# Store and move on
-	pvalues.append(interp(pval, [-1,1], outRange))
+	# Interpolate/Map the perlin noise values to the required
+	# range and store
+	pvalues.append(interp(pval, perlinRange, outputRange))
 	# Incerement base by step to get next noise value
 	base = base + step
 
