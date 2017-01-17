@@ -11,7 +11,7 @@ import sys
 import time
 
 # Pick a base point in time. We can move forward in time to 
-# geberate more perlin noise
+# generate more perlin noise
 base = 6 
 # Pick a time step to move forward by. The bigger the step the bigger
 # the jump in noise values
